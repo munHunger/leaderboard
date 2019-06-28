@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+$bg1: rgb(49, 2, 104);
+$bg2: rgb(206, 3, 162);
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+
+  /* Standard */
+  background: linear-gradient($from, $to);
+}
+
+body {
+  @include horizontal-gradient($bg1, $bg2);
+  height: 100%;
+}
+
+html {
+    height: 100%;
+}
