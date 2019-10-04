@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './component/app.component';
 import { CardComponent } from './component/card/card.component';
 import { PillComponent } from './component/pill/pill.component';
-import { LeaderService } from './service/leader.service';
 
 import { HttpClientModule } from "@angular/common/http";
 import { ApolloModule, APOLLO_OPTIONS } from "apollo-angular";
@@ -25,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     HttpLinkModule,
     FormsModule
   ],
-  providers: [LeaderService, {
+  providers: [{
     provide: APOLLO_OPTIONS,
     useFactory: (httpLink: HttpLink) => {
       return {

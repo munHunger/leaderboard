@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LeaderService } from '../service/leader.service';
 import { Team } from '../model/team.model';
 import { Game } from '../model/game.model';
 import { Outcome } from '../model/outcome.model';
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
 
   private selectedGame: Game;
 
-  constructor(private service: LeaderService, private apollo: Apollo) {
+  constructor(private apollo: Apollo) {
     //service.getLeaders().subscribe(leaders => this.leaders = leaders);
     //this.schedule = service.getSchedule();
   }
@@ -43,7 +42,7 @@ leaderboard{
     .valueChanges.subscribe(result => {
       console.log(result)
       console.log(this.leaders);
-      this.leaders = result.data.leaderboard as Team[]
+      this.leaders = (result.data as any).leaderboard as Team[]
     });
 
   this.apollo
@@ -66,7 +65,7 @@ upcomingMatches{
     `,
   })
   .valueChanges.subscribe(result => {
-    this.schedule = result.data.upcomingMatches as Game[]
+    this.schedule = (result.data as any).upcomingMatches as Game[]
   });
   }
 
