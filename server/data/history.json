@@ -1,32 +1,12 @@
 [
   {
     "home": {
-      "team": "mcTeam face",
-      "score": 3
-    },
-    "away": {
-      "team": "Ruskis",
-      "score": 1
-    }
-  },
-  {
-    "home": {
       "team": "Nacka Crushers",
       "score": 3
     },
     "away": {
       "team": "Ruskis",
-      "score": 1
-    }
-  },
-  {
-    "home": {
-      "team": "Schrödinger wildcats",
-      "score": 8
-    },
-    "away": {
-      "team": "Ruskis",
-      "score": 3
+      "score": 2
     }
   }
 ]
