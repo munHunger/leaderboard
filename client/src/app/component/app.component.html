@@ -28,3 +28,7 @@
       <button (click)="settleResult()">submit</button>
     </div>
 </div>
+
+<div class="standing">
+  <standing [model]="team" *ngFor="let team of leaders"></standing>
+</div>

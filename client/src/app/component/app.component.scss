@@ -1,5 +1,17 @@
 @import '../../styles.scss';
 
+.standing {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.standing > standing {
+    position: relative;
+    display: block;
+    margin: 15px;
+}
+
 .leader {
     text-align: center;
 }

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './component/app.component';
 import { CardComponent } from './component/card/card.component';
 import { PillComponent } from './component/pill/pill.component';
+import { StandingComponent } from './component/standing/standing.component';
 
 import { HttpClientModule } from "@angular/common/http";
 import { ApolloModule, APOLLO_OPTIONS } from "apollo-angular";
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     CardComponent,
-    PillComponent
+    PillComponent,
+    StandingComponent
   ],
   imports: [
     BrowserModule,
