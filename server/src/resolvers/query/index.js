@@ -32,7 +32,7 @@ let upcomingMatches = async (_, input) => {
               home: team,
               away: teams
                 .filter(other => other.name !== team.name)
-                .find(
+                .filter(
                   other =>
                     !history.some(match => {
                       let isInMatch =
@@ -45,6 +45,9 @@ let upcomingMatches = async (_, input) => {
                     })
                 )
             };
+          }).map(match => {
+            match.away = match.away[Math.floor(Math.random() * match.away.length)]
+            return match;
           });
           return unplayed.filter(match => match.home && match.away);
         })

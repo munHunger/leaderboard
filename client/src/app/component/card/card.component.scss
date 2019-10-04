@@ -5,15 +5,18 @@
     padding: 30px;
     border-radius: 30px;
     display: inline-block;
-    margin: 10px;
+    margin: 20px;
+    margin-top: 40px;
     @include bgShadow();
 }
 
 .large {
     zoom: 1.2;
+    -moz-transform: scale(1.2);
 }
 .small {
     zoom: 0.9;
+    -moz-transform: scale(0.9) translateX(-17px);
 }
 
 .avatar {
