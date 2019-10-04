@@ -1,0 +1,46 @@
+type Query {
+    leaderboard: [Team]
+    upcomingMatches: [UpcomingMatch]
+    history: [MatchResult]
+}
+
+type Mutation {
+    enterScore(match: MatchInput): [MatchResult]
+}
+
+type Subscription {
+    historyChange: [MatchResult]
+    leaderboardChange: [Team]
+    upcomingChange: [UpcomingMatch]
+}
+
+input MatchInput {
+    home: ScoreInput
+    away: ScoreInput
+}
+
+input ScoreInput {
+    team: String
+    score: Int
+}
+
+type Team {
+    name: String
+    owner: String
+    avatar: String
+}
+
+type MatchResult {
+    home: MatchEntry
+    away: MatchEntry
+}
+
+type MatchEntry {
+    team: Team
+    score: Int
+}
+
+type UpcomingMatch {
+    home: Team
+    away: Team
+}

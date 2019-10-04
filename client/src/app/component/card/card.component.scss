@@ -1,0 +1,59 @@
+@import '../../../styles.scss';
+
+.card {
+    @include horizontal-gradient($bg2, $bg1);
+    padding: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 10px;
+    @include bgShadow();
+}
+
+.large {
+    zoom: 1.2;
+}
+.small {
+    zoom: 0.9;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-image: url("https://png.pngtree.com/svg/20170602/0db185fb9c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include shadow();
+}
+
+.title {
+    font-size: $largeFont;
+    text-align: center;
+    font-weight: 900;
+    @include margin();
+}
+
+.owner {
+    letter-spacing: 2px;
+    color: rgb(200, 200, 200)
+}
+
+.score {
+    @include margin();
+}
+
+.wins {
+    float: left;
+    text-align: left;
+}
+
+.losses {
+    float: right;
+    text-align: right;
+}
+
+.outcome {
+    display: block;
+    font-size: 11px;
+}

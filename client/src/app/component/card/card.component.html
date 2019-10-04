@@ -1,8 +1,17 @@
-<div class="card">
-    <div class="avatar"></div>
-    <div class="title">Marcus' russians</div>
-    <div class="score">
-        <span class="wins">2x4 v ovechkin</span>
-        <span class="losses">3x0 v USA</span>
-    </div>
+<div class="card" [ngClass]="{ large: large, small: small }">
+  <div class="avatar" [ngStyle]="{'background-image': 'url(' + model.avatar + ')'}"></div>
+  <div class="title">{{ model.name }}</div>
+  <div class="owner">{{ model.owner }}</div>
+  <div class="score">
+    <span class="wins">
+      <span *ngFor="let win of model.wins" class="outcome"
+        >{{ win.away }}<br />{{ win.scoreHome }} x {{ win.scoreAway }}</span
+      >
+    </span>
+    <span class="losses">
+      <span *ngFor="let loss of model.losses" class="outcome"
+        >{{ loss.away }}<br />{{ loss.scoreHome }} x {{ loss.scoreAway }}</span
+      >
+    </span>
+  </div>
 </div>

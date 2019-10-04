@@ -1,1 +1,30 @@
-<card></card>
+<div class="leader">
+  <card [model]="leaders[1]"></card>
+  <card [model]="leaders[0]" large="true"></card>
+  <card [model]="leaders[2]" small=true></card>
+</div>
+
+<div class="next">
+  <div class="title">NEXT UP</div>
+  <div class="match" *ngFor="let game of schedule">
+    <pill [model]="game.home"></pill>
+    <div class="versus" (click)="openResultDialog(game)">vs</div> 
+    <pill [model]="game.away"></pill>
+  </div>
+</div>
+
+<div class="overlay" *ngIf="showResultDialog"></div>
+
+<div class="dialog" *ngIf="showResultDialog">
+    <div class="team">
+      {{selectedGame.home.name}} <br />
+      <input placeholder="home score" [(ngModel)]="selectedGame.home.score" type="number" />
+    </div>
+    <div class="team">
+      {{selectedGame.away.name}} <br />
+      <input placeholder="away score" [(ngModel)]="selectedGame.away.score" type="number" />
+    </div>
+    <div>
+      <button (click)="settleResult()">submit</button>
+    </div>
+</div>

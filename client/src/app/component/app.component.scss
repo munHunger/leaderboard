@@ -1,0 +1,77 @@
+@import '../../styles.scss';
+
+.leader {
+    text-align: center;
+}
+
+.next {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.next > .title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 6px;
+}
+
+.match {
+    position: relative;
+}
+
+.versus {
+    position: absolute;
+    display: inline;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(63, 63, 68);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    @include shadow();
+}
+
+.dialog .team {
+    padding: 15px;
+    display: inline-block;
+}
+
+.dialog input, .dialog button {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(34, 35, 37);
+    color: white;
+}
+
+.dialog button {
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.dialog button:hover {
+    @include shadow();
+}
