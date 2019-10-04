@@ -8,5 +8,25 @@
       "team": "Ruskis",
       "score": 2
     }
+  },
+  {
+    "home": {
+      "team": "Löwengriparna",
+      "score": 4
+    },
+    "away": {
+      "team": "Black Creek Beerers",
+      "score": 1
+    }
+  },
+  {
+    "home": {
+      "team": "Schrödinger wildcats",
+      "score": 3
+    },
+    "away": {
+      "team": "Ruskis",
+      "score": 4
+    }
   }
 ]
