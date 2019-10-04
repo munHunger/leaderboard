@@ -36,10 +36,8 @@ let upcomingMatches = async (_, input) => {
                   other =>
                     !history.some(match => {
                       let isInMatch =
-                        match.home.team === team.name ||
-                        match.away.team == team.name;
+                        match.home.team === team.name
                       let isOtherInMatch =
-                        match.home.team === other.name ||
                         match.away.team == other.name;
                       return isInMatch && isOtherInMatch;
                     })
