@@ -74,7 +74,7 @@ let leaderboard = async (_, input) => {
                   .map(match => {
                     let homeWin = match.home.score > match.away.score;
                     let isHome = match.home.team === team.name;
-                    return homeWin && isHome;
+                    return (homeWin && isHome) || (!homeWin && !isHome);
                   })
                   .reduce((acc, val) => {
                     if (val) acc++;
