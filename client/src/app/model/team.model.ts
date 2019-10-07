@@ -7,4 +7,5 @@ export class Team {
     wins: Outcome[];
     losses: Outcome[];
     score: number;
+    plays: number;
 }

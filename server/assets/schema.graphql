@@ -28,6 +28,8 @@ type Team {
     name: String
     owner: String
     avatar: String
+    score: Int
+    plays: Int
 }
 
 type MatchResult {

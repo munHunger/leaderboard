@@ -3,14 +3,14 @@
   <div class="title">{{ model.name }}</div>
   <div class="owner">{{ model.owner }}</div>
   <div class="score">
-    <span class="wins">
-      <span *ngFor="let win of model.wins" class="outcome"
-        >{{ win.away }}<br />{{ win.scoreHome }} x {{ win.scoreAway }}</span
+    <span class="result">
+      <span class="outcome"
+        >{{ model.score }}</span
       >
     </span>
-    <span class="losses">
-      <span *ngFor="let loss of model.losses" class="outcome"
-        >{{ loss.away }}<br />{{ loss.scoreHome }} x {{ loss.scoreAway }}</span
+    <span class="plays">
+      <span class="outcome"
+        >{{ model.plays }}</span
       >
     </span>
   </div>

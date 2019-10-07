@@ -27,26 +27,27 @@ let upcomingMatches = async (_, input) => {
         .readFile("./data/history.json", "utf8")
         .then(history => JSON.parse(history))
         .then(history => {
-          let unplayed = teams.map(team => {
-            return {
-              home: team,
-              away: teams
-                .filter(other => other.name !== team.name)
-                .filter(
-                  other =>
-                    !history.some(match => {
-                      let isInMatch =
-                        match.home.team === team.name
-                      let isOtherInMatch =
-                        match.away.team == other.name;
-                      return isInMatch && isOtherInMatch;
-                    })
-                )
-            };
-          }).map(match => {
-            match.away = match.away[Math.floor(Math.random() * match.away.length)]
-            return match;
-          });
+          let unplayed = teams
+            .map(team => {
+              return {
+                home: team,
+                away: teams
+                  .filter(other => other.name !== team.name)
+                  .filter(
+                    other =>
+                      !history.some(match => {
+                        let isInMatch = match.home.team === team.name;
+                        let isOtherInMatch = match.away.team == other.name;
+                        return isInMatch && isOtherInMatch;
+                      })
+                  )
+              };
+            })
+            .map(match => {
+              match.away =
+                match.away[Math.floor(Math.random() * match.away.length)];
+              return match;
+            });
           return unplayed.filter(match => match.home && match.away);
         })
     );
@@ -61,10 +62,15 @@ let leaderboard = async (_, input) => {
         .readFile("./data/history.json", "utf8")
         .then(history => JSON.parse(history))
         .then(history => {
-          return (teams
+          return teams
             .map(team => {
               return {
                 ...team,
+                plays: history.filter(
+                  match =>
+                    match.home.team === team.name ||
+                    match.away.team === team.name
+                ).length,
                 score: history
                   .filter(
                     match =>
@@ -83,7 +89,7 @@ let leaderboard = async (_, input) => {
                   }, 0)
               };
             })
-            .sort((a, b) => b.score - a.score));
+            .sort((a, b) => b.score - a.score);
         })
     );
 };

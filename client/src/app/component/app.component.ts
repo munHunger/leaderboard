@@ -35,6 +35,8 @@ leaderboard{
   name
   owner
   avatar
+  score
+  plays
 }
 }
       `,
