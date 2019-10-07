@@ -84,7 +84,6 @@ let leaderboard = async (_, input) => {
                   })
                   .reduce((acc, val) => {
                     if (val) acc++;
-                    else acc--;
                     return acc;
                   }, 0)
               };
