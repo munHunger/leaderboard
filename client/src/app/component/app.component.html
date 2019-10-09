@@ -30,5 +30,8 @@
 </div>
 
 <div class="standing">
-  <standing [model]="team" *ngFor="let team of leaders"></standing>
+  <div *ngFor="let team of leaders; let i = index">
+    <span *ngIf="i == 0 || leaders[i].score != leaders[i-1].score" class="standingScore">{{leaders[i].score}}</span>
+    <standing [model]="team"></standing>
+  </div>
 </div>

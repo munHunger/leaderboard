@@ -71,6 +71,14 @@ let leaderboard = async (_, input) => {
                     match.home.team === team.name ||
                     match.away.team === team.name
                 ).length,
+                goalDiff: history
+                  .filter(
+                    match =>
+                      match.home.team === team.name ||
+                      match.away.team === team.name
+                  )
+                  .map(match => Math.abs(match.home.score - match.away.score))
+                  .reduce((acc, val) => (acc += val), 0),
                 score: history
                   .filter(
                     match =>
@@ -88,7 +96,11 @@ let leaderboard = async (_, input) => {
                   }, 0)
               };
             })
-            .sort((a, b) => b.score - a.score);
+            .sort((a, b) => {
+              let score = b.score - a.score;
+              if (score != 0 || true) return score;
+              return b.goalDiff - a.goalDiff;
+            });
         })
     );
 };

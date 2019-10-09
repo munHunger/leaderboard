@@ -29,6 +29,7 @@ type Team {
     owner: String
     avatar: String
     score: Int
+    goalDiff: Int
     plays: Int
 }
 
