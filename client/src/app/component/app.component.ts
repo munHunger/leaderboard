@@ -37,6 +37,7 @@ leaderboard{
   avatar
   score
   plays
+  goalDiff
 }
 }
       `,

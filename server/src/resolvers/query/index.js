@@ -77,7 +77,11 @@ let leaderboard = async (_, input) => {
                       match.home.team === team.name ||
                       match.away.team === team.name
                   )
-                  .map(match => Math.abs(match.home.score - match.away.score))
+                  .map(match => {
+                    if (match.home.team === team.name)
+                      return match.home.score - match.away.score;
+                    else return match.away.score - match.home.score;
+                  })
                   .reduce((acc, val) => (acc += val), 0),
                 score: history
                   .filter(
@@ -98,7 +102,7 @@ let leaderboard = async (_, input) => {
             })
             .sort((a, b) => {
               let score = b.score - a.score;
-              if (score != 0 || true) return score;
+              if (score != 0) return score;
               return b.goalDiff - a.goalDiff;
             });
         })
