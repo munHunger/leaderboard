@@ -51,16 +51,6 @@
   },
   {
     "home": {
-      "team": "MAGA",
-      "score": 4
-    },
-    "away": {
-      "team": "mcTeam face",
-      "score": 2
-    }
-  },
-  {
-    "home": {
       "team": "Team team",
       "score": 3
     },
@@ -227,16 +217,6 @@
     "away": {
       "team": "Löwengriparna",
       "score": 1
-    }
-  },
-  {
-    "home": {
-      "team": "Ruskis",
-      "score": 1
-    },
-    "away": {
-      "team": "mcTeam face",
-      "score": 0
     }
   },
   {
