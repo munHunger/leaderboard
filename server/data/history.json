@@ -318,5 +318,95 @@
       "team": "Löwengriparna",
       "score": 4
     }
+  },
+  {
+    "home": {
+      "team": "Ruskis",
+      "score": 5
+    },
+    "away": {
+      "team": "Band Aid Warriors",
+      "score": 0
+    }
+  },
+  {
+    "home": {
+      "team": "Nacka Crushers",
+      "score": 4
+    },
+    "away": {
+      "team": "Black Creek Beerers",
+      "score": 5
+    }
+  },
+  {
+    "home": {
+      "team": "MAGA",
+      "score": 3
+    },
+    "away": {
+      "team": "Black Creek Beerers",
+      "score": 2
+    }
+  },
+  {
+    "home": {
+      "team": "Ruskis",
+      "score": 6
+    },
+    "away": {
+      "team": "Löwengriparna",
+      "score": 2
+    }
+  },
+  {
+    "home": {
+      "team": "Black Creek Beerers",
+      "score": 1
+    },
+    "away": {
+      "team": "Schrödinger wildcats",
+      "score": 2
+    }
+  },
+  {
+    "home": {
+      "team": "Nacka Crushers",
+      "score": 3
+    },
+    "away": {
+      "team": "Schrödinger wildcats",
+      "score": 2
+    }
+  },
+  {
+    "home": {
+      "team": "Ruskis",
+      "score": 6
+    },
+    "away": {
+      "team": "MAGA",
+      "score": 3
+    }
+  },
+  {
+    "home": {
+      "team": "Band Aid Warriors",
+      "score": 5
+    },
+    "away": {
+      "team": "Schrödinger wildcats",
+      "score": 1
+    }
+  },
+  {
+    "home": {
+      "team": "Schrödinger wildcats",
+      "score": 3
+    },
+    "away": {
+      "team": "MAGA",
+      "score": 2
+    }
   }
 ]
